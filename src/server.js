@@ -1,6 +1,5 @@
 // import express from 'express';
 // import path from 'path'
-require('dotenv').config()
 const configViewEngine = require('../src/config/viewEngine')
 const express = require('express')
 const webRouter = require('./routes/web')
@@ -19,6 +18,7 @@ configViewEngine(app)
 //route
 app.use('/', webRouter)
 app.use('/create', webRouter)
+app.use('/createUser', webRouter)
 
 
 
