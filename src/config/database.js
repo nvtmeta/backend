@@ -11,6 +11,7 @@ require('dotenv').config()
 //     database: process.env.DB_NAME
 // });
 
+//pool replace createConnection by fast, secure and limitConnection
 const connection = mysql.createPool({
     host: process.env.DB_HOST,
     port: process.env.DB_PORT, //default 3306
