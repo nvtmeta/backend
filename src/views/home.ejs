@@ -51,48 +51,50 @@
         <a href="/createUser">Create Users</a>
 
     </div>
-    <%= JSON.stringify(listUsers) %>
-        <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center">
 
-            <h1 class="flex text-[30px] font-semibold   mt-6 "> List Users</h1>
-        </div>
-        <div class="w-[1000px] flex justify-center items-center mt-20 mx-auto">
+        <h1 class="flex text-[30px] font-semibold   mt-6 "> List Users</h1>
+    </div>
 
-            <div class=" w-[800px]  relative overflow-x-auto ">
-                <table class="w-full text-base text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-base text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-8 py-3">
-                                ID
-                            </th>
-                            <th scope="col" class="px-8 py-3">
-                                Email
-                            </th>
-                            <th scope="col" class="px-8 py-3">
-                                Name
-                            </th>
-                            <th scope="col" class="px-8 py-3">
-                                City
-                            </th>
-                            <th scope="col" class="px-8 py-3">
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
+
+    <div class="w-[1000px] flex justify-center items-center mt-20 mx-auto">
+
+        <div class=" w-[800px]  relative overflow-x-auto ">
+            <table class="w-full text-base text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-base text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-8 py-3">
+                            ID
+                        </th>
+                        <th scope="col" class="px-8 py-3">
+                            Email
+                        </th>
+                        <th scope="col" class="px-8 py-3">
+                            Name
+                        </th>
+                        <th scope="col" class="px-8 py-3">
+                            City
+                        </th>
+                        <th scope="col" class="px-8 py-3">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% listUsers.forEach(function(user, index) { %>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row"
                                 class="px-8 py-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Apple MacBook Pro 17"
+                                <%= user.id %>
                             </th>
                             <td class="px-8 py-6">
-                                Silver
+                                <%= user.email %>
                             </td>
                             <td class="px-8 py-6">
-                                Laptop
+                                <%= user.name %>
                             </td>
                             <td class="px-8 py-6">
-                                $2999
+                                <%= user.city %>
                             </td>
                             <td class="px-6 py-4 flex  gap-[20px] mt-2">
                                 <a href="#"
@@ -101,55 +103,14 @@
                                     class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
 
                             </td>
-
                         </tr>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row"
-                                class="px-8 py-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Microsoft Surface Pro
-                            </th>
-                            <td class="px-8 py-6">
-                                White
-                            </td>
-                            <td class="px-8 py-6">
-                                Laptop PC
-                            </td>
-                            <td class="px-8 py-6">
-                                $1999
-                            </td>
-                            <td class="px-6 py-4">
-                                <a href="#"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                        <tr class="bg-white dark:bg-gray-800">
-                            <th scope="row"
-                                class="px-8 py-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Magic Mouse 2
-                            </th>
-                            <td class="px-8 py-6">
-                                Black
-                            </td>
-                            <td class="px-8 py-6">
-                                Accessories
-                            </td>
-                            <td class="px-8 py-6">
-                                $99
-                            </td>
-                            <td class="px-6 py-4">
-                                <a href="#"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-
+                        <% }); %>
+                </tbody>
+            </table>
         </div>
 
-        </div>
+
+    </div>
 
 </body>
 
