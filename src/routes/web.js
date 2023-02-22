@@ -1,5 +1,5 @@
 const express = require('express')
-const { getHomePage, postCreateUser, getCreatePage, putUpdateUser } = require('../controllers/controller')
+const { getHomePage, postCreateUser, getCreatePage, getEditUser, putUpdateUser } = require('../controllers/controller')
 const router = express.Router()
 
 
@@ -8,9 +8,12 @@ router.get('/', getHomePage)
 
 router.get('/createUser', getCreatePage)
 // post create user
-router.post('/create', postCreateUser)
+router.post('/createDone', postCreateUser)
 
-// update user
-router.get('/update/:id', putUpdateUser)
+// get edit user
+router.get('/edit/:id', getEditUser)
+
+// put update user
+router.post('/update', putUpdateUser)
 
 module.exports = router
