@@ -17,8 +17,7 @@ configViewEngine(app)
 
 //route
 app.use('/', webRouter)
-app.use('/create', webRouter)
-app.use('/createUser', webRouter)
+
 
 
 
